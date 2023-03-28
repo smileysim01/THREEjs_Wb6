@@ -37,7 +37,7 @@ scene.add(mesh1);
 let yellowStuff = new T.MeshBasicMaterial({ color: 0xffff00 });
 let mesh2 = new T.Mesh(geometry, yellowStuff);
 mesh2.position.x = 0.2;
-mesh2.position.z = -1;
+mesh2.position.z = 1;
 scene.add(mesh2);
 // @@Snippet:end
 

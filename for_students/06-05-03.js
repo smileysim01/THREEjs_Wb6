@@ -22,6 +22,20 @@ let controls = new OrbitControls(camera, renderer.domElement);
 
 //** STUDENT: Add some lights here */
 
+function get_light(color, x,y,z){
+    let direc_light = new T.DirectionalLight(color,1);
+    direc_light.position.set(x,y,z);
+    scene.add(direc_light);
+}
+
+get_light("#007500",5,0,0);
+get_light("#21B6A8",0,5,0);
+get_light("#8AFF8A",0,0,5);
+get_light("#75E6DA",-5,0,0);
+get_light("#0000FF",0,0,-5);
+
+
+
 // make a ground plane
 let groundBox = new T.BoxGeometry(6, 0.1, 6);
 let groundMesh = new T.Mesh(

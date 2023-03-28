@@ -25,6 +25,19 @@ materials[6] = new T.MeshStandardMaterial();
 materials[7] = new T.MeshStandardMaterial();
 materials[8] = new T.MeshStandardMaterial();
 
+function make_uniqu(color, emis, x = 0){
+    materials[x].color = new T.Color(color);
+    materials[x].emissive = new T.Color(emis);
+    materials[x].metalness = Math.random();
+    materials[x].roughness = Math.random();
+}
+
+let pallete = ["#05c4bc","#9900ff","#ff5a68","#8fce00","#f44336","#f2dc23","#b2c7c8","#e69138","#2948cc"];
+
+for(let i = 0; i<9; i++){
+    make_uniqu(pallete[i],pallete[8-i],i);
+}
+
 // make spheres to show off the materials
 let geometry = new T.SphereBufferGeometry(1, 20, 20);
 

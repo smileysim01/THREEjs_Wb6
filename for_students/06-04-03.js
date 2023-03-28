@@ -54,6 +54,12 @@ box4.scale.set(0.8, 0.8, 0.8);
 
 // STUDENT: position them into a stack (biggest on the bottom)
 
+box1.position.y = groundMesh.position.y + 1.05; //1
+box2.position.y = box1.position.y + 1.75; //2.75
+box3.position.y = box2.position.y + 1.25; //4
+box4.position.y = box3.position.y + 0.9;  //4.9
+box5.position.y = box4.position.y + 0.65; //5.55
+
 // add the boxes to the scene
 scene.add(box1);
 scene.add(box2);
